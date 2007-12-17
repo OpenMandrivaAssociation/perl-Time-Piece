@@ -12,7 +12,6 @@ Group:		    Development/Perl
 URL:		    http://search.cpan.org/dist/%{module}
 Source:		    http://www.cpan.org/modules/by-module/Time/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 This module replaces the standard localtime and gmtime functions with
