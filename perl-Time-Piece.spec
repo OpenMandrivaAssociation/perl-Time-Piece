@@ -1,7 +1,7 @@
 %define module	Time-Piece
 %define name	perl-%{module}
-%define version 1.12
-%define release %mkrel 2
+%define version 1.13
+%define release %mkrel 1
 
 Name:		    %{name}
 Version:	    %{version}
