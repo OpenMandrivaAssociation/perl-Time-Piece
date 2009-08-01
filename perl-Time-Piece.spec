@@ -1,18 +1,18 @@
-%define module	Time-Piece
-%define name	perl-%{module}
-%define version 1.15
-%define release %mkrel 1
+%define upstream_name	 Time-Piece
+%define upstream_version 1.15
 
-Name:		    %{name}
-Version:	    %{version}
-Release:	    %{release}
-Summary:	    Object Oriented time objects
-License:	    GPL
-Group:		    Development/Perl
-URL:		    http://search.cpan.org/dist/%{module}
-Source:		    http://www.cpan.org/modules/by-module/Time/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	Object Oriented time objects
+License:	GPL
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Time/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module replaces the standard localtime and gmtime functions with
@@ -25,7 +25,7 @@ the perl5-porters mailing list here:
 http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-01/msg00241.html
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +47,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Time
 %{perl_vendorarch}/auto/Time
 %{_mandir}/*/*
-
-
