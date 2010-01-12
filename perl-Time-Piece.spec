@@ -1,5 +1,5 @@
 %define upstream_name	 Time-Piece
-%define upstream_version 1.15
+%define upstream_version 1.16
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Object Oriented time objects
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Time/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Time/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
@@ -32,7 +32,7 @@ http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-01/msg00241.html
 %make
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot}
