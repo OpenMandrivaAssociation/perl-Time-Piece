@@ -13,6 +13,8 @@ Source0:	http://www.cpan.org/modules/by-module/Time/%{upstream_name}-%{upstream_
 
 BuildRequires:	perl-devel
 BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
+# temporary dep due to the perl-5.14 bump
+BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 %description
 This module replaces the standard localtime and gmtime functions with
