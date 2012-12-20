@@ -1,15 +1,15 @@
-%define upstream_name	 Time-Piece
-%define upstream_version 1.20
+%define	module	Time-Piece
+%define	modver	1.20
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    8
+Name:		perl-%{module}
+Version:	%{perl_convert_version %{modver}}
+Release:	9
 
 Summary:	Object Oriented time objects
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Time/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{module}
+Source0:	http://www.cpan.org/modules/by-module/Time/%{module}-%{modver}.tar.gz
 
 BuildRequires:	perl-devel
 
@@ -24,31 +24,28 @@ the perl5-porters mailing list here:
 http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-01/msg00241.html
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{modver}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean 
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorarch}/Time
 %{perl_vendorarch}/auto/Time
 %{_mandir}/*/*
 
-
 %changelog
+* Thu Dec 20 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.200.0-9
+- rebuild for new perl-5.16.2
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.200.0-7mdv2012.0
 + Revision: 765791
 - rebuilt for perl-5.14.2
