@@ -1,15 +1,15 @@
-%define	module	Time-Piece
+%define	modname	Time-Piece
 %define	modver	1.20
 
-Name:		perl-%{module}
+Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
 Release:	9
 
 Summary:	Object Oriented time objects
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source0:	http://www.cpan.org/modules/by-module/Time/%{module}-%{modver}.tar.gz
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Time/%{modname}-%{modver}.tar.gz
 
 BuildRequires:	perl-devel
 
@@ -24,7 +24,7 @@ the perl5-porters mailing list here:
 http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/2000-01/msg00241.html
 
 %prep
-%setup -q -n %{module}-%{modver}
+%setup -q -n %{modname}-%{modver}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
