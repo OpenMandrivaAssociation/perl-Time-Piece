@@ -3,7 +3,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	9
+Release:	10
 
 Summary:	Object Oriented time objects
 License:	GPL
