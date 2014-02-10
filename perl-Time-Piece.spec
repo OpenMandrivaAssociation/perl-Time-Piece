@@ -1,5 +1,5 @@
 %define	modname	Time-Piece
-%define modver 1.22
+%define modver 1.27
 
 Summary:	Object Oriented time objects
 Name:		perl-%{modname}
@@ -39,5 +39,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/Time
 %{perl_vendorarch}/auto/Time
 %{_mandir}/man3/*
+
 
 
