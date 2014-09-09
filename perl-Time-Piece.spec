@@ -1,14 +1,14 @@
 %define	modname	Time-Piece
-%define modver 1.27
+%define modver 1.29
 
 Summary:	Object Oriented time objects
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Time/Time-Piece-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Time/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
 
 %description
@@ -39,6 +39,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/Time
 %{perl_vendorarch}/auto/Time
 %{_mandir}/man3/*
-
-
-
