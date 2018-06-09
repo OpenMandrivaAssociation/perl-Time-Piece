@@ -1,15 +1,16 @@
 %define	modname	Time-Piece
-%define modver 1.29
+%define modver 1.3204
 
 Summary:	Object Oriented time objects
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	5
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Time/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl-devel
+BuildRequires:	perl(Test::More)
 
 %description
 This module replaces the standard localtime and gmtime functions with
